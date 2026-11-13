@@ -1,0 +1,63 @@
+:root {
+  --nuit: #0a1934; --carte: #12244a; --ligne: #1d3565; --bleu: #1f5fb0; --rouge: #e53935;
+  --or: #f2b705; --texte: #eef3fb; --gris: #9fb0cc;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--nuit); color: var(--texte);
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; -webkit-text-size-adjust: 100%; }
+body { min-height: 100vh; padding-bottom: env(safe-area-inset-bottom); }
+header { display: flex; align-items: center; gap: 10px; padding: calc(10px + env(safe-area-inset-top)) 14px 10px;
+  background: linear-gradient(180deg, #0f2a5c, var(--nuit)); position: sticky; top: 0; z-index: 5; }
+.logo { height: 38px; width: auto; border-radius: 8px; }
+.titre { display: flex; flex-direction: column; line-height: 1.15; flex: 1; min-width: 0; }
+.titre strong { font-size: 20px; letter-spacing: 1px; }
+.titre span { font-size: 11px; color: var(--gris); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.horloge { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 17px; }
+main { max-width: 980px; margin: 0 auto; padding: 0 12px 20px; }
+
+.ecran { background: #000; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 28px rgba(0, 0, 0, .45); }
+.lecteur { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.lecteur iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.attente { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 12px; color: var(--gris); text-align: center; padding: 16px;
+  background: radial-gradient(circle at 50% 40%, #16306a, #06102a); }
+.attente p { margin: 0; font-size: 15px; max-width: 30em; }
+.point { width: 16px; height: 16px; border-radius: 50%; background: var(--rouge); animation: pouls 1.4s infinite; }
+@keyframes pouls { 0% { box-shadow: 0 0 0 0 rgba(229, 57, 53, .7); } 100% { box-shadow: 0 0 0 18px rgba(229, 57, 53, 0); } }
+.barre-direct { display: flex; align-items: center; gap: 8px; padding: 9px 12px; background: #0c1b3d; flex-wrap: wrap; }
+.badge { background: var(--rouge); color: #fff; font-weight: 800; font-size: 12px; padding: 4px 9px; border-radius: 6px; letter-spacing: .5px; }
+.badge.hors { background: #44536f; }
+.barre-direct button, .bouton-lien, .actions button, .onglets button {
+  background: var(--ligne); color: var(--texte); border: 0; border-radius: 8px; padding: 8px 12px; font-size: 14px;
+  text-decoration: none; cursor: pointer; font-family: inherit; }
+.bouton-lien { margin-left: auto; }
+
+.cartes { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 10px; margin-top: 12px; }
+.carte { background: var(--carte); border-radius: 14px; padding: 13px 14px; min-width: 0; }
+.carte h2 { margin: 0 0 4px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--gris); }
+.maintenant h2 { color: #ff8a80; }
+.nom { margin: 0; font-size: 21px; font-weight: 800; line-height: 1.2; overflow-wrap: anywhere; }
+.nom.petit { font-size: 17px; }
+.heure { margin: 4px 0 0; color: var(--gris); font-size: 13px; }
+.jauge { height: 5px; background: var(--ligne); border-radius: 3px; margin-top: 10px; overflow: hidden; }
+.jauge div { height: 100%; width: 0; background: var(--rouge); border-radius: 3px; transition: width .6s; }
+
+.grille { margin-top: 14px; background: var(--carte); border-radius: 14px; padding: 10px 6px 6px; }
+.onglets { display: flex; gap: 6px; padding: 0 8px 8px; }
+.onglets button.actif { background: var(--bleu); font-weight: 700; }
+#programme { list-style: none; margin: 0; padding: 0; }
+#programme li { display: flex; gap: 12px; align-items: baseline; padding: 9px 10px; border-top: 1px solid rgba(255, 255, 255, .06); }
+#programme li .h { color: var(--gris); font-variant-numeric: tabular-nums; font-size: 13px; min-width: 96px; }
+#programme li .p { font-size: 15px; overflow-wrap: anywhere; }
+#programme li.passe { opacity: .45; }
+#programme li.encours { background: rgba(229, 57, 53, .16); border-radius: 10px; border-top-color: transparent; }
+#programme li.encours .p { font-weight: 800; }
+#programme li.special .p::after { content: " ★"; color: var(--or); }
+
+.actions { text-align: center; margin-top: 16px; }
+.actions button { background: var(--bleu); font-weight: 700; padding: 11px 18px; }
+.aide { color: var(--gris); font-size: 13px; margin: 10px auto 0; max-width: 34em; }
+footer { text-align: center; color: var(--gris); font-size: 12px; padding: 6px 12px 22px; }
+footer p { margin: 3px 0; }
+.credit { opacity: .75; }
+@media (max-width: 420px) { .cartes { grid-template-columns: minmax(0, 1fr); } .nom { font-size: 19px; } }

@@ -1,0 +1,228 @@
+{
+  "maj": "2026-11-13 13:30",
+  "semaine": [
+    {
+      "debut": "05h30",
+      "fin": "06h00",
+      "programme": "Musiques religieuses"
+    },
+    {
+      "debut": "06h00",
+      "fin": "06h30",
+      "programme": "Nyota / Info"
+    },
+    {
+      "debut": "06h30",
+      "fin": "07h15",
+      "programme": "Dessin animé"
+    },
+    {
+      "debut": "07h15",
+      "fin": "07h55",
+      "programme": "Publicités + communiqués"
+    },
+    {
+      "debut": "07h55",
+      "fin": "08h00",
+      "programme": "Pause + transition"
+    },
+    {
+      "debut": "08h00",
+      "fin": "08h30",
+      "programme": "RTNC / Info"
+    },
+    {
+      "debut": "08h30",
+      "fin": "08h55",
+      "programme": "Info locale"
+    },
+    {
+      "debut": "08h55",
+      "fin": "10h30",
+      "programme": "Film"
+    },
+    {
+      "debut": "10h30",
+      "fin": "10h40",
+      "programme": "RTNC / Info Swahili"
+    },
+    {
+      "debut": "10h40",
+      "fin": "10h50",
+      "programme": "Pause musicale"
+    },
+    {
+      "debut": "10h50",
+      "fin": "11h50",
+      "programme": "Documentaire"
+    },
+    {
+      "debut": "11h50",
+      "fin": "12h00",
+      "programme": "Reportage Mwando"
+    },
+    {
+      "debut": "12h00",
+      "fin": "12h55",
+      "programme": "France 24"
+    },
+    {
+      "debut": "12h55",
+      "fin": "13h00",
+      "programme": "Mémoire à Babu"
+    },
+    {
+      "debut": "13h00",
+      "fin": "14h10",
+      "programme": "Film"
+    },
+    {
+      "debut": "14h10",
+      "fin": "15h00",
+      "programme": "RTNC / Écho militaire"
+    },
+    {
+      "debut": "15h00",
+      "fin": "15h45",
+      "programme": "Émission ou magazine LC"
+    },
+    {
+      "debut": "15h45",
+      "fin": "16h00",
+      "programme": "Pause musicale"
+    },
+    {
+      "debut": "16h00",
+      "fin": "17h00",
+      "programme": "Documentaire"
+    },
+    {
+      "debut": "17h00",
+      "fin": "17h30",
+      "programme": "TV5 Question"
+    },
+    {
+      "debut": "17h30",
+      "fin": "18h00",
+      "programme": "Dessin animé"
+    },
+    {
+      "debut": "18h00",
+      "fin": "18h15",
+      "programme": "France 24"
+    },
+    {
+      "debut": "18h15",
+      "fin": "18h25",
+      "programme": "Pause musicale"
+    },
+    {
+      "debut": "18h25",
+      "fin": "18h40",
+      "programme": "Publicités + communiqués"
+    },
+    {
+      "debut": "18h40",
+      "fin": "19h20",
+      "programme": "Info locale"
+    },
+    {
+      "debut": "19h20",
+      "fin": "20h20",
+      "programme": "Série"
+    },
+    {
+      "debut": "20h20",
+      "fin": "21h00",
+      "programme": "Émission ou magazine LC"
+    },
+    {
+      "debut": "21h00",
+      "fin": "22h30",
+      "programme": "Film"
+    },
+    {
+      "debut": "22h30",
+      "fin": "23h00",
+      "programme": "Pause musicale"
+    }
+  ],
+  "weekend": [
+    {
+      "debut": "05h30",
+      "fin": "06h00",
+      "programme": "Musiques religieuses"
+    },
+    {
+      "debut": "06h00",
+      "fin": "06h30",
+      "programme": "Nyota / Info"
+    },
+    {
+      "debut": "06h30",
+      "fin": "07h15",
+      "programme": "Dessin animé"
+    },
+    {
+      "debut": "07h15",
+      "fin": "07h55",
+      "programme": "Publicités + communiqués"
+    },
+    {
+      "debut": "07h55",
+      "fin": "08h00",
+      "programme": "Pause + transition"
+    },
+    {
+      "debut": "08h00",
+      "fin": "08h30",
+      "programme": "RTNC / Info"
+    },
+    {
+      "debut": "08h30",
+      "fin": "08h55",
+      "programme": "Info locale"
+    },
+    {
+      "debut": "08h55",
+      "fin": "10h30",
+      "programme": "Film"
+    },
+    {
+      "debut": "10h30",
+      "fin": "10h40",
+      "programme": "RTNC / Info Swahili"
+    },
+    {
+      "debut": "10h40",
+      "fin": "10h50",
+      "programme": "Pause musicale"
+    },
+    {
+      "debut": "10h50",
+      "fin": "11h50",
+      "programme": "Documentaire"
+    },
+    {
+      "debut": "11h50",
+      "fin": "12h00",
+      "programme": "Reportage Mwando"
+    },
+    {
+      "debut": "12h00",
+      "fin": "12h55",
+      "programme": "France 24"
+    },
+    {
+      "debut": "12h55",
+      "fin": "13h00",
+      "programme": "Mémoire à Babu"
+    },
+    {
+      "debut": "13h00",
+      "fin": "23h00",
+      "programme": "Match"
+    }
+  ],
+  "evenements": []
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src https://www.youtube.com https://www.youtube-nocookie.com; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#0a1934">
+<meta name="description" content="R.T.M Radio Télévision Moba en direct : regardez la télévision de Moba sur votre téléphone.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RTM">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+<title>RTM en direct</title>
+</head>
+<body>
+<header>
+  <img src="icons/logo.png" alt="R.T.M" class="logo">
+  <div class="titre"><strong>RTM</strong><span>Radio Télévision Moba</span></div>
+  <div id="horloge" class="horloge"></div>
+</header>
+
+<main>
+  <section class="ecran">
+    <div id="lecteur" class="lecteur">
+      <div id="attente" class="attente">
+        <div class="point"></div>
+        <p id="attente-texte">Chargement du direct…</p>
+      </div>
+    </div>
+    <div class="barre-direct">
+      <span class="badge" id="badge">● EN DIRECT</span>
+      <button id="recharger" type="button">↻ Relancer</button>
+      <a id="lien-youtube" class="bouton-lien" target="_blank" rel="noopener" hidden>Ouvrir dans YouTube</a>
+    </div>
+  </section>
+
+  <section class="cartes">
+    <article class="carte maintenant">
+      <h2>En ce moment</h2>
+      <p class="nom" id="maintenant-nom">—</p>
+      <p class="heure" id="maintenant-heure"></p>
+      <div class="jauge"><div id="jauge"></div></div>
+    </article>
+    <article class="carte">
+      <h2>À suivre</h2>
+      <p class="nom petit" id="suivant-nom">—</p>
+      <p class="heure" id="suivant-heure"></p>
+    </article>
+  </section>
+
+  <section class="grille">
+    <div class="onglets">
+      <button type="button" id="onglet-auj" class="actif">Aujourd'hui</button>
+      <button type="button" id="onglet-dem">Demain</button>
+    </div>
+    <ol id="programme"></ol>
+  </section>
+
+  <section class="actions">
+    <button type="button" id="partager">Partager l'application</button>
+    <p id="installer-aide" class="aide"></p>
+  </section>
+</main>
+
+<footer>
+  <p>R.T.M — Radio Télévision Moba · Tanganyika, RDC</p>
+  <p class="credit">Application développée par l'ingénieur BARUCK TCHANSA PAUL</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
