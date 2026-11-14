@@ -13,7 +13,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=4">
 <title>RTM en direct</title>
 </head>
 <body>
@@ -44,12 +44,14 @@
     <p class="heure">Info locale, journaux, reportages, magazines et émissions du Tanganyika.</p>
   </section>
 
-  <section class="reactions" id="reactions" hidden>
+  <section class="reactions" id="reactions">
     <div class="barre-reactions">
       <button type="button" id="aime" class="aime" aria-pressed="false" aria-label="J'aime"><span class="coeur">♥</span> J'aime <span id="aime-compte"></span></button>
       <button type="button" id="partager-haut" class="partage">↗ Partager</button>
     </div>
     <h2>Commentaires en direct</h2>
+    <p id="com-bientot" class="bientot" hidden>Les commentaires et les « j'aime » arrivent très bientôt dans l'application.
+      En attendant, partagez RTM autour de vous !</p>
     <ol id="com-liste" class="com-liste" aria-live="polite"></ol>
     <form id="com-form" class="com-form" autocomplete="off">
       <input id="com-nom" type="text" maxlength="30" placeholder="Votre nom" aria-label="Votre nom" required>
@@ -70,10 +72,12 @@
 
 <footer>
   <p>R.T.M — Radio Télévision Moba · Tanganyika, RDC</p>
-  <p class="credit">Application développée par l'ingénieur BARUCK TCHANSA PAUL</p>
+  <p class="credit">Application développée par l'ingénieur BARUCK TCHANSA PAUL<br>
+  sous le haut patronage de l'honorable Christian MWANDO KABULO<br>
+  et de l'honorable sénatrice MWANDO KATEMPA Christine</p>
 </footer>
-<script src="app.js"></script>
-<script src="filtre.js"></script>
-<script type="module" src="commentaires.js"></script>
+<script src="app.js?v=4"></script>
+<script src="filtre.js?v=4"></script>
+<script type="module" src="commentaires.js?v=4"></script>
 </body>
 </html>

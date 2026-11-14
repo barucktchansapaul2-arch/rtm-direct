@@ -103,3 +103,10 @@ footer p { margin: 3px 0; }
 .mod-suppr { background: var(--ligne); }
 .mod-bloquer { background: var(--rouge); }
 .com-ligne button.plein { background: var(--bleu); padding: 11px 16px; font-size: 15px; width: 100%; }
+
+.bientot { margin: 4px 2px 8px; padding: 12px; border-radius: 10px; background: rgba(31, 95, 176, .18);
+  color: var(--texte); font-size: 14px; line-height: 1.4; }
+.barre-reactions button:disabled { opacity: .45; }
+.credit { line-height: 1.5; }
+
+[hidden] { display: none !important; }

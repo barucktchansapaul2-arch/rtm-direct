@@ -59,8 +59,14 @@ async function envoyer(e) {
 
 async function demarrer() {
   try { magasin = await ouvrirMagasin(); } catch (e) { magasin = null; }
-  if (!magasin) { $("reactions").hidden = true; return; }      // base pas encore branchée : rien n'est montré
-  $("reactions").hidden = false;
+  if (!magasin) {                       // base pas encore branchée : partage seul, commentaires annoncés
+    $("com-bientot").hidden = false;
+    $("com-liste").hidden = true;
+    $("com-form").hidden = true;
+    $("aime").disabled = true;
+    $("aime").title = "Bientôt disponible";
+    return;
+  }
   try { await magasin.connecter(); } catch (e) { message("Connexion aux commentaires impossible pour l'instant.", "erreur"); return; }
   $("com-nom").value = localStorage.getItem("rtm_nom") || "";
   $("com-texte").addEventListener("input", () => { $("com-compte").textContent = `${$("com-texte").value.length}/300`; });

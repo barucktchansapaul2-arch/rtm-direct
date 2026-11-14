@@ -1,5 +1,5 @@
 // RTM en direct — fonctionnement hors ligne de l'habillage (le direct, lui, a toujours besoin d'internet)
-const CACHE = "rtm-direct-v3";
+const CACHE = "rtm-direct-v4";
 const FICHIERS = ["./", "index.html", "style.css", "app.js", "filtre.js", "magasin.js", "commentaires.js", "manifest.webmanifest", "icons/logo.png", "icons/icon-192.png"];
 
 self.addEventListener("install", (e) => {
@@ -17,6 +17,7 @@ self.addEventListener("fetch", (e) => {
       .catch(() => caches.match(url.pathname)));
     return;
   }
-  e.respondWith(fetch(e.request).then((r) => { const copie = r.clone(); caches.open(CACHE).then((c) => c.put(e.request, copie)); return r; })
+  // toujours le réseau d'abord (sans le cache du navigateur) : une mise à jour est vue tout de suite
+  e.respondWith(fetch(e.request, { cache: "no-cache" }).then((r) => { const copie = r.clone(); caches.open(CACHE).then((c) => c.put(e.request, copie)); return r; })
     .catch(() => caches.match(e.request, { ignoreSearch: true })));
 });
