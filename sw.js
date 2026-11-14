@@ -1,6 +1,6 @@
 // RTM en direct — fonctionnement hors ligne de l'habillage (le direct, lui, a toujours besoin d'internet)
-const CACHE = "rtm-direct-v2";
-const FICHIERS = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "icons/logo.png", "icons/icon-192.png"];
+const CACHE = "rtm-direct-v3";
+const FICHIERS = ["./", "index.html", "style.css", "app.js", "filtre.js", "magasin.js", "commentaires.js", "manifest.webmanifest", "icons/logo.png", "icons/icon-192.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FICHIERS)).then(() => self.skipWaiting()));

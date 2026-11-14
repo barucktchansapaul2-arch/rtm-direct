@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src https://www.youtube.com https://www.youtube-nocookie.com; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src https://www.youtube.com https://www.youtube-nocookie.com; img-src 'self' data:; style-src 'self'; script-src 'self' https://www.gstatic.com; connect-src 'self' https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://firebaseinstallations.googleapis.com https://www.googleapis.com">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#0a1934">
 <meta name="description" content="R.T.M Radio Télévision Moba en direct : regardez la télévision de Moba sur votre téléphone.">
@@ -34,7 +34,7 @@
     <div class="barre-direct">
       <span class="badge" id="badge">● EN DIRECT</span>
       <button id="recharger" type="button">↻ Relancer</button>
-      <a id="lien-youtube" class="bouton-lien" target="_blank" rel="noopener" hidden>Commenter et aimer sur YouTube</a>
+      <a id="lien-youtube" class="bouton-lien" target="_blank" rel="noopener" hidden>Voir sur YouTube</a>
     </div>
   </section>
 
@@ -42,6 +42,24 @@
     <h2>R.T.M en direct</h2>
     <p class="nom petit">La télévision de Moba, où que vous soyez</p>
     <p class="heure">Info locale, journaux, reportages, magazines et émissions du Tanganyika.</p>
+  </section>
+
+  <section class="reactions" id="reactions" hidden>
+    <div class="barre-reactions">
+      <button type="button" id="aime" class="aime" aria-pressed="false" aria-label="J'aime"><span class="coeur">♥</span> J'aime <span id="aime-compte"></span></button>
+      <button type="button" id="partager-haut" class="partage">↗ Partager</button>
+    </div>
+    <h2>Commentaires en direct</h2>
+    <ol id="com-liste" class="com-liste" aria-live="polite"></ol>
+    <form id="com-form" class="com-form" autocomplete="off">
+      <input id="com-nom" type="text" maxlength="30" placeholder="Votre nom" aria-label="Votre nom" required>
+      <div class="com-ligne">
+        <input id="com-texte" type="text" maxlength="300" placeholder="Écrivez un commentaire…" aria-label="Votre commentaire" required>
+        <button id="com-envoyer" type="submit">Envoyer</button>
+      </div>
+      <div class="com-pied"><span id="com-message" class="com-message"></span><span id="com-compte">0/300</span></div>
+    </form>
+    <p class="regle">Restons respectueux : les insultes sont refusées et leurs auteurs bloqués.</p>
   </section>
 
   <section class="actions">
@@ -55,5 +73,7 @@
   <p class="credit">Application développée par l'ingénieur BARUCK TCHANSA PAUL</p>
 </footer>
 <script src="app.js"></script>
+<script src="filtre.js"></script>
+<script type="module" src="commentaires.js"></script>
 </body>
 </html>

@@ -64,6 +64,7 @@ async function demarrer() {
   // les boutons d'abord, le réseau ensuite
   $("recharger").addEventListener("click", chargerLecteur);
   $("partager").addEventListener("click", partager);
+  $("partager-haut").addEventListener("click", partager);
   const iphone = /iphone|ipad|ipod/i.test(navigator.userAgent);
   const installee = window.matchMedia("(display-mode: standalone)").matches || navigator.standalone;
   $("installer-aide").textContent = installee ? "" : iphone

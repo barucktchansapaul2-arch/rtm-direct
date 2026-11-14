@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self' https://www.gstatic.com; connect-src 'self' https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://firebaseinstallations.googleapis.com https://www.googleapis.com">
+<meta name="robots" content="noindex">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+<title>RTM — Modération</title>
+</head>
+<body>
+<header>
+  <img src="icons/logo.png" alt="R.T.M" class="logo">
+  <div class="titre"><strong>Modération</strong><span>Commentaires de RTM en direct</span></div>
+</header>
+<main>
+  <section class="carte" id="connexion">
+    <h2>Réservé à l'équipe RTM</h2>
+    <form id="form-connexion" class="com-form">
+      <input id="email" type="email" placeholder="E-mail du modérateur" autocomplete="username" required>
+      <input id="mdp" type="password" placeholder="Mot de passe" autocomplete="current-password" required>
+      <div class="com-ligne"><button type="submit" class="plein">Se connecter</button></div>
+      <div class="com-pied"><span id="msg-connexion" class="com-message"></span></div>
+    </form>
+  </section>
+
+  <section class="reactions" id="panneau" hidden>
+    <h2>Commentaires récents (les plus récents en bas)</h2>
+    <ol id="mod-liste" class="com-liste mod"></ol>
+    <h2>Utilisateurs bloqués</h2>
+    <ol id="mod-bloques" class="com-liste mod"></ol>
+    <p class="regle">« Supprimer » retire le commentaire pour tout le monde. « Bloquer » supprime le commentaire et empêche cette personne de commenter et d'aimer. Un blocage se lève avec « Débloquer ».</p>
+    <div class="com-pied"><span id="msg-mod" class="com-message"></span></div>
+  </section>
+</main>
+<script src="filtre.js"></script>
+<script type="module" src="moderation.js"></script>
+</body>
+</html>
