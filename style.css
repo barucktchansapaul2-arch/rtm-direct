@@ -36,6 +36,8 @@ main { max-width: 980px; margin: 0 auto; padding: 0 12px 20px; }
 .carte { background: var(--carte); border-radius: 14px; padding: 13px 14px; min-width: 0; }
 .carte h2 { margin: 0 0 4px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--gris); }
 .maintenant h2 { color: #ff8a80; }
+.accueil { margin-top: 12px; }
+.accueil h2 { color: #ff8a80; }
 .nom { margin: 0; font-size: 21px; font-weight: 800; line-height: 1.2; overflow-wrap: anywhere; }
 .nom.petit { font-size: 17px; }
 .heure { margin: 4px 0 0; color: var(--gris); font-size: 13px; }
